@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="./style2.css">
+</head>
+
+<body>
+    <div class="skip">
+        <a href="./index.html">skip</a>
+    </div>
+    <div class="logo-image">
+        <img src="./Login B2.png" alt="logo image">
+    </div>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div id="error-message" class="error-message"></div>
+    </div>
+    <script type='text/javascript'>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loginForm = document.getElementById("login-form");
+            const errorMessage = document.getElementById("error-message");
+
+            loginForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("password").value;
+
+                // You should replace this with your authentication logic, e.g., a server request.
+                // For this example, we check if the username is "user" and the password is "password".
+                if (username === "user" && password === "password") {
+                    // Redirect to a dashboard or home page
+                    window.location.href = "dashboard.html";
+                } else {
+                    errorMessage.textContent = "Invalid username or password. Please try again.";
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

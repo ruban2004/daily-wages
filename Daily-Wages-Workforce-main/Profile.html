@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Profile</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .Full-formed-box {
+            background-image: url(./banner.jpg);
+            padding: 10px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 25px;
+        }
+
+        .box {
+            border: 2px solid black;
+            padding: 100px 0px 0px 0px;
+        }
+
+        .form-group {
+
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #gender {
+            width: 5505x;
+        }
+
+        button {
+            background-color: #fbca09;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    
+    </style> 
+    
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Daily Wages Workforce</h1>
+            <h2>Work Today, Earn Today.</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Apply</a></li>
+            <li><a href="#">Locate</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <div class="profile">
+                <a href="#"><img src="./profile new.png"></a>
+            </div>
+        </ul>
+    </nav>
+    <div class="Full-formed-box">
+        <div class="container">
+            <h1>User Profile</h1>
+
+            <form id="profileForm" enctype="multipart/form-data">
+                <div class="form-group">
+                    <div class="picture-box">
+                        <label for="profilePicture">Profile Picture</label>
+                        <input type="file" id="profilePicture" name="profilePicture">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Phone Number</label>
+                    <input type="text" id="number" name="number" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="text" id="age" name="age" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address">
+                </div>
+                <div class="form-group">
+                    <label for="bio">Bio</label>
+                    <textarea id="bio" name="bio" rows="4"></textarea>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="main_footer">
+            <div class="mail_subscribe"><input type="email" placeholder="E-mail">
+                <button>Subscribe</button>
+            </div>
+            <ul class="Links_of_fotter">
+                <li><a href="#"></a> About </li>
+                <li><a href="#"></a> Special Offers </li>
+                <li><a href="#"></a> Location </li>
+                <li><a href="#"></a> Management </li>
+                <li><a href="#"></a> Photo Tour </li>
+                <li><a href="#"></a> Blogs </li>
+                <li><a href="#"></a> FAQ's </li>
+                <li><a href="#"></a> News</li>
+                <li><a href="#"></a> Shares </li>
+                <li><a href="#"></a> Work </li>
+                <li><a href="#"></a> Process </li>
+                <li><a href="#"></a> New's </li>
+                <li><a href="#"></a> Conditions </li>
+                <li><a href="#"></a>Contact </li>
+                <li><a href="#"></a> Privacy policy </li>
+                <li><a href="#"></a> Terms and conditions</li>
+                <li><a href="#"></a> Privacy policy </li>
+                <li><a href="#"></a>Cookie policy</li>
+            </ul>
+        </div>
+        <hr>
+        <p>&copy; 2023 Job Finder. All rights reserved.</p>
+    </footer>
+    <script>
+        // JavaScript for handling the form submission
+        const profileForm = document.getElementById('profileForm');
+        profileForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const age = document.getElementById('age').value;
+            const gender = document.getElementById('gender').value;
+            const bio = document.getElementById('bio').value;
+
+            // You can perform further actions here, like sending the data to a server
+
+            // For this example, let's display the user's information in the console
+            console.log('Name: ' + name);
+            console.log('Email: ' + email);
+            console.log('Age: ' + age);
+            console.log('Gender: ' + gender);
+            console.log('Bio: ' + bio);
+
+            // Optionally, you can reset the form
+            profileForm.reset();
+        });
+    </script>
+</body>
+
+</html>
